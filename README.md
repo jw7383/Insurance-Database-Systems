@@ -39,3 +39,5 @@ I set up the front end of my application using Streamlit. My medical questionnai
 To run the app locally, run `streamlit run app.py`.
 
 The front end of my application connects to the back end of my application via the API Gateway.
+
+To access the public version of the app, navigate to https://jason-insurance-company.streamlit.app/
