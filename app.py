@@ -90,7 +90,7 @@ def show_quote_page():
     with col2:
         inches = st.number_input("Inches", min_value=0, max_value=11, step=1, format="%i")
 
-    if feet and inches:
+    if feet:
         height_cm = feet_inches_to_cm(feet, inches)
 
     weight = st.number_input("Enter your weight in pounds", min_value=0, max_value=500)
@@ -98,7 +98,7 @@ def show_quote_page():
     if weight:
         weight_kg = lb_to_kgs(weight)
 
-    if feet and inches and weight:
+    if feet and weight:
         bmi = calculate_bmi(feet*12 + inches, weight)
 
     st.header("General Health")
@@ -166,7 +166,7 @@ def show_quote_page():
     fried_potato_consumption = st.slider("During the past month, how many times did you eat fried potatoes?.",
                             0, 100, step=1)
 
-    all_fields_filled = name and dob and address and sex and feet and inches and weight and general_health and checkup and exercise and skin_cancer and other_cancer and depression and arthritis and smoking_history and alcohol_consumption and fruit_consumption and green_vegetables_consumption and fried_potato_consumption
+    all_fields_filled = name and dob and address and sex and feet and weight and general_health and checkup and exercise and skin_cancer and other_cancer and depression and arthritis and smoking_history and alcohol_consumption and fruit_consumption and green_vegetables_consumption and fried_potato_consumption
 
     if st.button("Calculate Quote"):
         if all_fields_filled and "" not in [sex, skin_cancer, general_health, checkup, exercise, skin_cancer, other_cancer, depression, arthritis, smoking_history]:
