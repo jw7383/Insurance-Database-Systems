@@ -92,17 +92,14 @@ def show_quote_page():
 
     if feet and inches:
         height_cm = feet_inches_to_cm(feet, inches)
-        st.write(f"height in cm: {height_cm}")
 
     weight = st.number_input("Enter your weight in pounds", min_value=0, max_value=500)
 
     if weight:
         weight_kg = lb_to_kgs(weight)
-        st.write(f"weight in kg: {weight_kg}")
 
     if feet and inches and weight:
-        bmi = calculate_bmi(feet + inches*12, weight)
-        st.write(f"bmi: {bmi}")
+        bmi = calculate_bmi(feet*12 + inches, weight)
 
     st.header("General Health")
                             
