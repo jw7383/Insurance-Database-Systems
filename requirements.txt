@@ -1,8 +1,7 @@
 pandas
-psycopg2
+psycopg2-binary
 sqlalchemy
 streamlit
-datetime
 boto3
 joblib
 scikit-learn
