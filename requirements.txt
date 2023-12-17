@@ -1,3 +1,9 @@
 pandas
 psycopg2
 sqlalchemy
+streamlit
+datetime
+boto3
+joblib
+scikit-learn
+requests
